@@ -7,7 +7,7 @@ elem = 0 #Для количества чисел больших медианно
 list = [] #Задаем пустой список
 for i in range (0 , N) : #Цикл от 0 до N
     list.append(a)
-    a, b = b, a + b
+    a, b = b, a + b #Операция для Фибоначчи
 print("Наш ряд фибоначи:" , list)
 for i in range(0,len(list),2) :
     list[i] = list[i] *2
