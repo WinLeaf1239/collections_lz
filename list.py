@@ -6,21 +6,21 @@ b = 1 #Для числа фибоначи
 elem = 0 #Для количества чисел больших медианного значения
 list = [] #Задаем пустой список
 for i in range (0 , N) : #Цикл от 0 до N
-    list.append(a)
+    list.append(a) #Добавляем
     a, b = b, a + b #Операция для Фибоначчи
 print("Наш ряд фибоначи:" , list)
-for i in range(0,len(list),2) :
+for i in range(0,len(list),2) : #Оперция для чет
     list[i] = list[i] *2
-for i in range(1,len(list),2) :
+for i in range(1,len(list),2) : #Операция для нечет
     list[i] = list[i] **2
 print("Наш измененный ряд фибоначи:" , list)
 print("Минимальный элемент нашего измененного ряда:" , min(list))
 print("Максимальный элемент нашего измененного ряда:" , max(list))
 print("Длина нашего измененного ряда:" , len(list))
 
-med = statistics.median(list)
+med = statistics.median(list) #Операция для вычисления медианного значения
 print("Медианное значание нашего ряда:" , med)
-for i in range(0,len(list)) :
+for i in range(0,len(list)) : #Рассматриваем числа которые больше медианного значения
     if list[i] > med :
         elem += 1
-print("Кол-во элементов больше медианного значения:" , elem)
+print("Кол-во элементов больше медианного значения:" , elem) 
